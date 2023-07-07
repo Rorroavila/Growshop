@@ -1,0 +1,252 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrowShop</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="{% static 'img/logo.png' %}" alt="Logo de la tienda">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#tips">Tips</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>    
+        </nav>
+        <a href="{% url 'iniciarSesion' %}" class="btn"><button id="btn-iniciar-sesion">Iniciar Sesión</button></a>
+        <a href="{% url 'registro' %}" class="btn"><button id="btn-registrarse">Registrarse</button></a>
+        <div class="container-icon">
+            <div class="container-cart-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-cart">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                  </svg>
+                  <div class="count-product">
+                    <span id="contador-productos">0</span>
+                  </div> 
+            </div>
+              <div class="container-cart-products hidden-cart">
+                <div class="row-product">
+                    <div class="cart-product">
+                        <div class="info-cart-product">
+                            <span class="cantidad-producto-carrito">1</span>
+                            <p class="titulo-producto-carrito">indoor</p>
+                            <span class="precio-producto-carrito">$100.000</span>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-close">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                          </svg>
+                    </div>
+                </div>
+                <div class="cart-total">
+                    <h3>Total</h3>
+                    <span class="total-pagar">$100.000</span>
+                </div>
+              </div>             
+        </div>
+    </header>
+
+    <section class="container" id="inicio">
+        <div class="slider-wrapper">
+            <div class="slider">
+                <img id="slider-1" src="{% static 'img/carrusel 1.jpg' %}" alt="">
+                <img id="slider-2" src="{% static 'img/carrusel 2.jpg' %}" alt="">
+                <img id="slider-3" src="{% static 'img/carrusel 3.png' %}" alt="">
+            </div>
+            <div class="slider-nav">
+                <a href="#slider-1"></a>
+                <a href="#slider-2"></a>
+                <a href="#slider-3"></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="nosotros" id="nosotros">
+        <div class="nosotros-header">
+            <h2>NOSOTROS</h2>
+        </div>
+        <div class="nosotros-info">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Veniam, et accusantium, distinctio possimus voluptas sunt
+                maxime mollitia velit saepe eum quo doloremque neque dolorum obcaecati.
+                Unde qui atque fuga aut? Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Possimus unde quis laborum eaque in repellendus
+                autem neque enim fuga eligendi, repellat cumque quae harum.
+                Quibusdam nisi totam laborum fuga voluptatem. Lorem ipsum dolor sit
+                amet consectetur adipisicing elit. Adipisci exercitationem sunt deserunt
+                quisquam quam repellendus. Facilis voluptates repellendus officiis fugit
+                magni provident magnam, in, a illum perferendis nam earum unde! Lorem
+                ipsum dolor, sit amet consectetur adipisicing elit. Mollitia saepe nobis
+                commodi natus hic odit numquam accusantium tempore? Impedit velit quia
+                inventore tenetur sunt praesentium, officiis incidunt officia eLorem ipsum dolor sit amet consectetur adipisicing elit.
+                Veniam, et accusantium, distinctio possimus voluptas sunt
+                maxime mollitia velit saepe eum quo doloremque neque dolorum obcaecati.
+                Unde qui atque fuga aut? Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Possimus unde quis laborum eaque in repellendus
+                autem neque enim fuga eligendi, repellat cumque quae harum.
+                Quibusdam nisi totam laborum fuga voluptatem. Lorem ipsum dolor sit
+                amet consectetur adipisicing elit. Adipisci exercitationem sunt deserunt
+                quisquam quam repellendus. Facilis voluptates repellendus officiis fugit
+                magni provident magnam, in, a illum perferendis nam earum unde! Lorem
+                ipsum dolor, sit amet consectetur adipisicing elit. Mollitia saepe nobis
+                commodi natus hic odit numquam accusantium tempore? Impedit velit quia
+                inventore tenetur sunt praesentium, officiis incidunt officia eius repellendus?</p>
+        </div>
+    </section>
+
+    <section class="productos" id="productos">
+        <div class="productos-header">
+            <h2>PRODUCTOS</h2>
+        </div>
+    <div class="container-items">
+        <div class="item">
+            <figure>
+                <img src="{% static 'img/Producto 1.jpg' %}" alt="producto">
+            </figure>
+            <div class="info-product">
+                <h2>Indoor Profesional</h2>
+                <p class="price">$100000</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="{% static 'img/Producto 2.jpg' %}" alt="producto">
+            </figure>
+            <div class="info-product">
+                <h2>Pipa de Vidrio</h2>
+                <p class="price">$5000</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="{% static 'img/Producto 3.jpg' %}" alt="producto">
+            </figure>
+            <div class="info-product">
+                <h2>Fertilizante</h2>
+                <p class="price">$25000</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="{% static 'img/Producto 4.jpeg' %}" alt="producto">
+            </figure>
+            <div class="info-product">
+                <h2>Bong</h2>
+                <p class="price">$20000</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="{% static 'img/Producto 5.jpg' %}" alt="producto">
+            </figure>
+            <div class="info-product">
+                <h2>Moledor</h2>
+                <p class="price">$5000</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="{% static 'img/Producto 6.jpg' %}" alt="producto">
+            </figure>
+            <div class="info-product">
+                <h2>Vaporizador</h2>
+                <p class="price">$35000</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <section class="tips" id="tips">
+        <div class="tips-header">
+            <h2>TIPS</h2>
+        </div>
+        <div class="container-tips tip">
+            <img src="{% static 'img/tips1.png' %}" alt="autocultivo">
+            <div class="tip-text">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Veniam, et accusantium, distinctio possimus voluptas sunt
+                    maxime mollitia velit saepe eum quo doloremque neque dolorum obcaecati.
+                    Unde qui atque fuga aut? Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Possimus unde quis laborum eaque in repellendus
+                    autem neque enim fuga eligendi, repellat cumque quae harum.
+                    Quibusdam nisi totam laborum fuga voluptatem. Lorem ipsum dolor sit
+                    amet consectetur adipisicing elit. Adipisci exercitationem sunt deserunt
+                    quisquam quam repellendus. Facilis voluptates repellendus officiis fugit
+                    magni provident magnam, in, a illum perferendis nam earum unde! Lorem
+                    ipsum dolor.</p>
+                <a href="https://growithjane.com/es/guia-de-cultivo-de-cannabis/" target="_blank" class="ver-mas">Ver más</a>
+            </div>
+        </div>
+        <div class="container-tips tip">
+            <img src="{% static 'img/tips2.jpg' %}" alt="tu propio indoor">
+            <div class="tip-text">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Veniam, et accusantium, distinctio possimus voluptas sunt
+                    maxime mollitia velit saepe eum quo doloremque neque dolorum obcaecati.
+                    Unde qui atque fuga aut? Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Possimus unde quis laborum eaque in repellendus
+                    autem neque enim fuga eligendi, repellat cumque quae harum.
+                    Quibusdam nisi totam laborum fuga voluptatem. Lorem ipsum dolor sit
+                    amet consectetur adipisicing elit. Adipisci exercitationem sunt deserunt
+                    quisquam quam repellendus. Facilis voluptates repellendus officiis fugit
+                    magni provident magnam, in, a illum perferendis nam earum unde! Lorem
+                    ipsum dolor.</p>
+                <a href="https://www.youtube.com/watch?app=desktop&v=Yuo7KWSKJjI" target="_blank" class="ver-mas">Ver más</a>
+            </div>
+        </div>
+        <div class="container-tips tip">
+            <img src="{% static 'img/tips3.jpg' %}" alt="limpieza de bong">
+            <div class="tip-text">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Veniam, et accusantium, distinctio possimus voluptas sunt
+                    maxime mollitia velit saepe eum quo doloremque neque dolorum obcaecati.
+                    Unde qui atque fuga aut? Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Possimus unde quis laborum eaque in repellendus
+                    autem neque enim fuga eligendi, repellat cumque quae harum.
+                    Quibusdam nisi totam laborum fuga voluptatem. Lorem ipsum dolor sit
+                    amet consectetur adipisicing elit. Adipisci exercitationem sunt deserunt
+                    quisquam quam repellendus. Facilis voluptates repellendus officiis fugit
+                    magni provident magnam, in, a illum perferendis nam earum unde! Lorem
+                    ipsum dolor.</p>
+                <a href="https://www.semillas-de-marihuana.com/blog/limpiar-bong/" target="_blank" class="ver-mas">Ver más</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="contacto" id="contacto">
+        <div class="contacto-header">
+            <h2>CONTACTO</h2>
+        </div>
+        <div class="container-contacto">
+            <img src="{% static 'img/contacto1.png' %}" alt="">
+                <div class="info-contacto">
+                    <p>+56 9 72839129</p>
+                </div>
+        </div>
+        <div class="container-contacto">
+            <img src="{% static 'img/contacto2.png' %}" alt="">
+                <div class="info-contacto">
+                    <p>el.po.rorro.growshop@gmail.com</p>
+                </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>@ Derechos reservados por Rodrigo Ávila. 2023 </p></footer>
+    <script src="{% static 'js/index.js' %}"></script>
+</body>
+</html>

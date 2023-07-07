@@ -1,0 +1,91 @@
+/* ---- GENERALES ---- */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    background: #BAD8C0;
+    font-family: sans-serif;
+  }
+  
+  .container {
+    max-width: 90%;
+    margin: auto;
+    margin-top: 150px;
+  }
+ 
+  .form {
+    border-top: 2px solid #174C0E;
+    max-width: 400px;
+    padding: 30px 50px;
+    margin: auto;
+    margin-top: 10px;
+    background: linear-gradient(
+        0deg,
+        #27701B 0%,
+        #54894B 50%
+    );
+  }
+  
+  .form-titulo {
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+  }
+  
+  .form-input {
+    margin-bottom: 30px;
+  }
+  
+  .form-input label {
+    display: block;
+    margin-top: 10px;
+    font-size: 15px;
+    color: #17450F;
+  }
+  
+  .form-input input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: 1px solid #17450F;
+  }
+  
+  .form-input input:focus + label {
+    font-weight: bold;
+    color: black;
+  }
+  
+  .form-boton input {
+    background: black;
+    color: white;
+    padding: 10px 50px;
+    font-size: 25px;
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+    border: none;
+  }
+  
+  .form-boton input:hover {
+    background: #082503;
+    transition: 0.5s;
+  }
+  
+  .mensajeError {
+    color: #BC3643;
+    margin-top: 0px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  .mensajeCorrecto {
+    text-align: center;
+    font-weight: bold;
+  }
